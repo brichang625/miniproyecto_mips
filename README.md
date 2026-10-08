@@ -50,7 +50,7 @@ La actividad permitió comprender el recorrido de los datos desde memoria hacia 
 
 ## Documentación
 
-El reporte consolidado está en [`documentacion/reporte_proyecto.pdf`](documentacion/reporte_proyecto.pdf).
+El reporte consolidado está preparado en la carpeta local; su publicación en este repositorio está pendiente de autorización para compartir el documento en público.
 
 ## Bibliografía
 
