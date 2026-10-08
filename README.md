@@ -42,7 +42,7 @@ Añadir capturas reales del simulador a `evidencias/`:
 - `registros.png`: registros `$t0 = 25`, `$t1 = 8`, `$t2 = 200`, `$t3 = 1`.
 - `resultado.png`: salida `Produccion calculada: 200`.
 
-Las capturas están pendientes de incorporar.
+Las capturas se extrajeron de la evidencia de ejecución incluida en el PDF del Avance 2 enviado por el grupo; muestran consola, registros y listado del simulador.
 
 ## Conclusiones
 
