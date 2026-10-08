@@ -1,27 +1,41 @@
 .data
-dato1:      .word 40
-dato2:      .word 12
-resultado1: .word 0
-resultado2: .word 0
+dato1:      .word 25       #piezas por h
+dato2:      .word 8        #h trabajadas
+resultado1: .word 0        #produccion total
+resultado2: .word 0        #comparacion dif
 
 .text
 .globl main
+
 main:
-    # Punto de partida de la actividad: cargar operandos, procesarlos,
-    # almacenar los resultados y finalizar.
-    lw   $t0, dato1
-    lw   $t1, dato2
+#cargar datos
+lw $t0, dato1
+lw $t1, dato2
+#mul piezas por horas
+mul $t2, $t0, $t1
 
-    # Operación base demostrativa: producto de los operandos
-    mul  $t2, $t0, $t1
-    sw   $t2, resultado1
+#comp si son diferentes
+sne $t3, $t0, $t1
 
-    # Bandera de comparación: 1 si son diferentes, 0 si son iguales
-    li   $t3, 0
-    beq  $t0, $t1, iguales
-    li   $t3, 1
-iguales:
-    sw   $t3, resultado2
+#guardar resultados principales
+sw $t2, resultado1
+sw $t3, resultado2
 
-    li   $v0, 10
-    syscall
+#restar t0 - t1
+sub $t4, $t0, $t1
+
+#restar t1 - t0
+sub $t5, $t1, $t0
+
+#div t0 / t1
+div $t0, $t1
+mflo $t6 #cociente
+mfhi $t7 #residuo
+#mflo y mfhi para registrar
+
+#comparar si son iguales
+seq $t8, $t0, $t1
+
+#fin
+li $v0, 10
+syscall
