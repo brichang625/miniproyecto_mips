@@ -1,1 +1,0 @@
-Añadir aquí las capturas reales de ejecución: codigo.png, registros.png y resultado.png.
